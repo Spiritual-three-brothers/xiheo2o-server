@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>com.stb</groupId>
+		<artifactId>xiheo2o</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>xiheo2o-item-center</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<modules>
+		<module>item-center</module>
+        <module>item-es</module>
+		<module>item-api</module>
+		<module>item-common</module>
+		<module>item-config</module>
+	</modules>
+
+</project>
