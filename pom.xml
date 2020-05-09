@@ -21,8 +21,10 @@
         <module>xiheo2o-user-biz-service</module>
         <module>xiheo2o-common</module>
         <module>xiheo2o-biz-center</module>
-        <module>xiheo2o-open-api</module>
+        <module>xiheo2o-item-open-api</module>
         <module>xiheo2o-config</module>
+        <module>xiheo2o-shop-open-api</module>
+        <module>xiheo2o-sales-open-api</module>
     </modules>
 
     <properties>
