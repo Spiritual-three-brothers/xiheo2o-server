@@ -1,9 +1,9 @@
 spring:
   datasource:
     druid:
-      url: sdasdasd
-      username: asdasd
-      password: asdasdads
+      url: jdbc:mysql://127.0.0.1:3306/xiheo2o?useUnicode=true&characterEncoding=UTF8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&allowMultiQueries=true&tinyInt1isBit=false
+      username: root
+      password: root
 
       ## 连接池配置
       initial-size: 5
