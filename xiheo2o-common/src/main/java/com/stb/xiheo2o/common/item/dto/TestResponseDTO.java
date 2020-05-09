@@ -1,4 +1,4 @@
-package com.stb.xiheo2o.common.dto;
+package com.stb.xiheo2o.common.item.dto;
 
 import lombok.Data;
 

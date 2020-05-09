@@ -1,6 +1,6 @@
 package com.stb.xiheo2o.center.api.item;
 
-import com.stb.xiheo2o.common.dto.TestResponseDTO;
+import com.stb.xiheo2o.common.item.dto.TestResponseDTO;
 
 public interface ItemCategoryAPI {
 

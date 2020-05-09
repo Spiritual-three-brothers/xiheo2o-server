@@ -1,7 +1,7 @@
 package com.stb.xiheo2o.center.api.item.impl;
 
 import com.stb.xiheo2o.center.api.item.ItemCategoryAPI;
-import com.stb.xiheo2o.common.dto.TestResponseDTO;
+import com.stb.xiheo2o.common.item.dto.TestResponseDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Service;
 import org.dromara.soul.client.common.annotation.SoulClient;
