@@ -19,3 +19,8 @@ spring:
       test-on-return: false
       pool-prepared-statements: true
       max-open-prepared-statements: 20
+soul:
+  dubbo:
+    admin-url: http://localhost:9095
+    context-path: /xihe
+    app-name: xiheo2o

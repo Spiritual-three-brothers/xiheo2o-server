@@ -40,11 +40,16 @@
             </dependency>
 
 
-
             <dependency>
                 <groupId>org.apache.curator</groupId>
                 <artifactId>curator-recipes</artifactId>
                 <version>2.13.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dromara</groupId>
+                <artifactId>soul-client-apache-dubbo</artifactId>
+                <version>2.1.2-RELEASE</version>
             </dependency>
 
             <dependency>
@@ -80,6 +85,12 @@
             <dependency>
                 <groupId>com.stb</groupId>
                 <artifactId>xiheo2o-config</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.stb</groupId>
+                <artifactId>xiheo2o-common</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
 

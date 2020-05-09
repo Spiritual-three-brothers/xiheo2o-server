@@ -39,6 +39,11 @@
             <artifactId>xiheo2o-config</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.stb</groupId>
+            <artifactId>xiheo2o-common</artifactId>
+        </dependency>
+
         <!--三方依赖-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -54,6 +59,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.dromara</groupId>
+            <artifactId>soul-client-apache-dubbo</artifactId>
         </dependency>
 
         <dependency>

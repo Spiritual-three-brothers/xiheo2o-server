@@ -4,6 +4,8 @@ spring:
   application:
     name: xiheo2o
 dubbo:
+  application:
+    name: xiheo2o
   scan:
     base-packages: com.stb.xiheo2o.center
   protocol:
