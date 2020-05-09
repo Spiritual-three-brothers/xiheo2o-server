@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
-    <artifactId>xiheo2o-trade-center</artifactId>
+    <artifactId>xiheo2o-trade-biz-service</artifactId>
 
 
 </project>

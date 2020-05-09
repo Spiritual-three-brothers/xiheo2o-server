@@ -9,15 +9,8 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>xiheo2o-item-center</artifactId>
+	<artifactId>xiheo2o-item-biz-service</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
-	<modules>
-		<module>item-center</module>
-        <module>item-es</module>
-		<module>item-api</module>
-		<module>item-common</module>
-		<module>item-config</module>
-	</modules>
 
 </project>
