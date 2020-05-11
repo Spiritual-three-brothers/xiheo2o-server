@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stb.xiheo2o.center.dao.mapper.GoodsMapper">
+  <resultMap id="BaseResultMap" type="com.stb.xiheo2o.center.dao.entity.Goods">
+    <!--@mbg.generated-->
+    <!--@Table ic_goods-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="item_pic" jdbcType="VARCHAR" property="itemPic" />
+    <result column="item_price" jdbcType="BIGINT" property="itemPrice" />
+    <result column="item_long_title" jdbcType="VARCHAR" property="itemLongTitle" />
+    <result column="item_short_title" jdbcType="VARCHAR" property="itemShortTitle" />
+    <result column="item_spu_id" jdbcType="BIGINT" property="itemSpuId" />
+    <result column="item_status" jdbcType="INTEGER" property="itemStatus" />
+    <result column="item_tab_info" jdbcType="VARCHAR" property="itemTabInfo" />
+    <result column="item_scroll_images" jdbcType="VARCHAR" property="itemScrollImages" />
+    <result column="item_tag" jdbcType="VARCHAR" property="itemTag" />
+    <result column="internal" jdbcType="BOOLEAN" property="internal" />
+    <result column="item_shop_id" jdbcType="BIGINT" property="itemShopId" />
+    <result column="item_sales" jdbcType="INTEGER" property="itemSales" />
+    <result column="is_delete" jdbcType="BOOLEAN" property="isDelete" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, item_pic, item_price, item_long_title, item_short_title, item_spu_id, item_status, 
+    item_tab_info, item_scroll_images, item_tag, internal, item_shop_id, item_sales, 
+    is_delete, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from ic_goods
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from ic_goods
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.stb.xiheo2o.center.dao.entity.Goods" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into ic_goods (item_pic, item_price, item_long_title, 
+      item_short_title, item_spu_id, item_status, 
+      item_tab_info, item_scroll_images, item_tag, 
+      internal, item_shop_id, item_sales, 
+      is_delete, create_time, update_time
+      )
+    values (#{itemPic,jdbcType=VARCHAR}, #{itemPrice,jdbcType=BIGINT}, #{itemLongTitle,jdbcType=VARCHAR}, 
+      #{itemShortTitle,jdbcType=VARCHAR}, #{itemSpuId,jdbcType=BIGINT}, #{itemStatus,jdbcType=INTEGER}, 
+      #{itemTabInfo,jdbcType=VARCHAR}, #{itemScrollImages,jdbcType=VARCHAR}, #{itemTag,jdbcType=VARCHAR}, 
+      #{internal,jdbcType=BOOLEAN}, #{itemShopId,jdbcType=BIGINT}, #{itemSales,jdbcType=INTEGER}, 
+      #{isDelete,jdbcType=BOOLEAN}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.stb.xiheo2o.center.dao.entity.Goods" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into ic_goods
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="itemPic != null">
+        item_pic,
+      </if>
+      <if test="itemPrice != null">
+        item_price,
+      </if>
+      <if test="itemLongTitle != null">
+        item_long_title,
+      </if>
+      <if test="itemShortTitle != null">
+        item_short_title,
+      </if>
+      <if test="itemSpuId != null">
+        item_spu_id,
+      </if>
+      <if test="itemStatus != null">
+        item_status,
+      </if>
+      <if test="itemTabInfo != null">
+        item_tab_info,
+      </if>
+      <if test="itemScrollImages != null">
+        item_scroll_images,
+      </if>
+      <if test="itemTag != null">
+        item_tag,
+      </if>
+      <if test="internal != null">
+        internal,
+      </if>
+      <if test="itemShopId != null">
+        item_shop_id,
+      </if>
+      <if test="itemSales != null">
+        item_sales,
+      </if>
+      <if test="isDelete != null">
+        is_delete,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="itemPic != null">
+        #{itemPic,jdbcType=VARCHAR},
+      </if>
+      <if test="itemPrice != null">
+        #{itemPrice,jdbcType=BIGINT},
+      </if>
+      <if test="itemLongTitle != null">
+        #{itemLongTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="itemShortTitle != null">
+        #{itemShortTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSpuId != null">
+        #{itemSpuId,jdbcType=BIGINT},
+      </if>
+      <if test="itemStatus != null">
+        #{itemStatus,jdbcType=INTEGER},
+      </if>
+      <if test="itemTabInfo != null">
+        #{itemTabInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="itemScrollImages != null">
+        #{itemScrollImages,jdbcType=VARCHAR},
+      </if>
+      <if test="itemTag != null">
+        #{itemTag,jdbcType=VARCHAR},
+      </if>
+      <if test="internal != null">
+        #{internal,jdbcType=BOOLEAN},
+      </if>
+      <if test="itemShopId != null">
+        #{itemShopId,jdbcType=BIGINT},
+      </if>
+      <if test="itemSales != null">
+        #{itemSales,jdbcType=INTEGER},
+      </if>
+      <if test="isDelete != null">
+        #{isDelete,jdbcType=BOOLEAN},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.stb.xiheo2o.center.dao.entity.Goods">
+    <!--@mbg.generated-->
+    update ic_goods
+    <set>
+      <if test="itemPic != null">
+        item_pic = #{itemPic,jdbcType=VARCHAR},
+      </if>
+      <if test="itemPrice != null">
+        item_price = #{itemPrice,jdbcType=BIGINT},
+      </if>
+      <if test="itemLongTitle != null">
+        item_long_title = #{itemLongTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="itemShortTitle != null">
+        item_short_title = #{itemShortTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSpuId != null">
+        item_spu_id = #{itemSpuId,jdbcType=BIGINT},
+      </if>
+      <if test="itemStatus != null">
+        item_status = #{itemStatus,jdbcType=INTEGER},
+      </if>
+      <if test="itemTabInfo != null">
+        item_tab_info = #{itemTabInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="itemScrollImages != null">
+        item_scroll_images = #{itemScrollImages,jdbcType=VARCHAR},
+      </if>
+      <if test="itemTag != null">
+        item_tag = #{itemTag,jdbcType=VARCHAR},
+      </if>
+      <if test="internal != null">
+        internal = #{internal,jdbcType=BOOLEAN},
+      </if>
+      <if test="itemShopId != null">
+        item_shop_id = #{itemShopId,jdbcType=BIGINT},
+      </if>
+      <if test="itemSales != null">
+        item_sales = #{itemSales,jdbcType=INTEGER},
+      </if>
+      <if test="isDelete != null">
+        is_delete = #{isDelete,jdbcType=BOOLEAN},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.stb.xiheo2o.center.dao.entity.Goods">
+    <!--@mbg.generated-->
+    update ic_goods
+    set item_pic = #{itemPic,jdbcType=VARCHAR},
+      item_price = #{itemPrice,jdbcType=BIGINT},
+      item_long_title = #{itemLongTitle,jdbcType=VARCHAR},
+      item_short_title = #{itemShortTitle,jdbcType=VARCHAR},
+      item_spu_id = #{itemSpuId,jdbcType=BIGINT},
+      item_status = #{itemStatus,jdbcType=INTEGER},
+      item_tab_info = #{itemTabInfo,jdbcType=VARCHAR},
+      item_scroll_images = #{itemScrollImages,jdbcType=VARCHAR},
+      item_tag = #{itemTag,jdbcType=VARCHAR},
+      internal = #{internal,jdbcType=BOOLEAN},
+      item_shop_id = #{itemShopId,jdbcType=BIGINT},
+      item_sales = #{itemSales,jdbcType=INTEGER},
+      is_delete = #{isDelete,jdbcType=BOOLEAN},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

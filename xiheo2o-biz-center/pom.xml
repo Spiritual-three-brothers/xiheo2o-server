@@ -41,6 +41,11 @@
 
         <dependency>
             <groupId>com.stb</groupId>
+            <artifactId>xiheo2o-item-biz-service</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.stb</groupId>
             <artifactId>xiheo2o-common</artifactId>
         </dependency>
 
@@ -77,9 +82,22 @@
         </dependency>
 
         <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
         </dependency>
+
+
     </dependencies>
 
     <profiles>
@@ -121,6 +139,9 @@
                 <filtering>true</filtering>
 
                 <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
                 <excludes>
                     <exclude>application-dev.yml</exclude>
                     <exclude>application-test.yml</exclude>
@@ -140,6 +161,14 @@
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>false</filtering>
+            </resource>
+
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>*.xml</include>
+                </includes>
             </resource>
         </resources>
 

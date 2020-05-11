@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stb.xiheo2o.center.dao.mapper.ItemSkuMapper">
+  <resultMap id="BaseResultMap" type="com.stb.xiheo2o.center.dao.entity.ItemSku">
+    <!--@mbg.generated-->
+    <!--@Table ic_item_sku-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="item_id" jdbcType="BIGINT" property="itemId" />
+    <result column="sku_describe" jdbcType="VARCHAR" property="skuDescribe" />
+    <result column="sku_node_id" jdbcType="BIGINT" property="skuNodeId" />
+    <result column="sku_pid" jdbcType="BIGINT" property="skuPid" />
+    <result column="sku_detail_id" jdbcType="BIGINT" property="skuDetailId" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="is_delete" jdbcType="TINYINT" property="isDelete" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, item_id, sku_describe, sku_node_id, sku_pid, sku_detail_id, `level`, sort, is_delete, 
+    create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from ic_item_sku
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from ic_item_sku
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.stb.xiheo2o.center.dao.entity.ItemSku" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into ic_item_sku (item_id, sku_describe, sku_node_id, 
+      sku_pid, sku_detail_id, `level`, 
+      sort, is_delete, create_time, 
+      update_time)
+    values (#{itemId,jdbcType=BIGINT}, #{skuDescribe,jdbcType=VARCHAR}, #{skuNodeId,jdbcType=BIGINT}, 
+      #{skuPid,jdbcType=BIGINT}, #{skuDetailId,jdbcType=BIGINT}, #{level,jdbcType=INTEGER}, 
+      #{sort,jdbcType=INTEGER}, #{isDelete,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.stb.xiheo2o.center.dao.entity.ItemSku" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into ic_item_sku
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="itemId != null">
+        item_id,
+      </if>
+      <if test="skuDescribe != null">
+        sku_describe,
+      </if>
+      <if test="skuNodeId != null">
+        sku_node_id,
+      </if>
+      <if test="skuPid != null">
+        sku_pid,
+      </if>
+      <if test="skuDetailId != null">
+        sku_detail_id,
+      </if>
+      <if test="level != null">
+        `level`,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="isDelete != null">
+        is_delete,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="itemId != null">
+        #{itemId,jdbcType=BIGINT},
+      </if>
+      <if test="skuDescribe != null">
+        #{skuDescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="skuNodeId != null">
+        #{skuNodeId,jdbcType=BIGINT},
+      </if>
+      <if test="skuPid != null">
+        #{skuPid,jdbcType=BIGINT},
+      </if>
+      <if test="skuDetailId != null">
+        #{skuDetailId,jdbcType=BIGINT},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="isDelete != null">
+        #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.stb.xiheo2o.center.dao.entity.ItemSku">
+    <!--@mbg.generated-->
+    update ic_item_sku
+    <set>
+      <if test="itemId != null">
+        item_id = #{itemId,jdbcType=BIGINT},
+      </if>
+      <if test="skuDescribe != null">
+        sku_describe = #{skuDescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="skuNodeId != null">
+        sku_node_id = #{skuNodeId,jdbcType=BIGINT},
+      </if>
+      <if test="skuPid != null">
+        sku_pid = #{skuPid,jdbcType=BIGINT},
+      </if>
+      <if test="skuDetailId != null">
+        sku_detail_id = #{skuDetailId,jdbcType=BIGINT},
+      </if>
+      <if test="level != null">
+        `level` = #{level,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="isDelete != null">
+        is_delete = #{isDelete,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.stb.xiheo2o.center.dao.entity.ItemSku">
+    <!--@mbg.generated-->
+    update ic_item_sku
+    set item_id = #{itemId,jdbcType=BIGINT},
+      sku_describe = #{skuDescribe,jdbcType=VARCHAR},
+      sku_node_id = #{skuNodeId,jdbcType=BIGINT},
+      sku_pid = #{skuPid,jdbcType=BIGINT},
+      sku_detail_id = #{skuDetailId,jdbcType=BIGINT},
+      `level` = #{level,jdbcType=INTEGER},
+      sort = #{sort,jdbcType=INTEGER},
+      is_delete = #{isDelete,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

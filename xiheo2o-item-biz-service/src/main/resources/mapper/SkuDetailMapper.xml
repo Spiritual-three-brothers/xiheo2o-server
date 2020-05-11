@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stb.xiheo2o.center.dao.mapper.SkuDetailMapper">
+  <resultMap id="BaseResultMap" type="com.stb.xiheo2o.center.dao.entity.SkuDetail">
+    <!--@mbg.generated-->
+    <!--@Table ic_sku_detail-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="price" jdbcType="BIGINT" property="price" />
+    <result column="long_title" jdbcType="VARCHAR" property="longTitle" />
+    <result column="short_title" jdbcType="VARCHAR" property="shortTitle" />
+    <result column="father_id" jdbcType="BIGINT" property="fatherId" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="stock" jdbcType="BIGINT" property="stock" />
+    <result column="version" jdbcType="BIGINT" property="version" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="on_marketing" jdbcType="BOOLEAN" property="onMarketing" />
+    <result column="is_delete" jdbcType="BOOLEAN" property="isDelete" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, price, long_title, short_title, father_id, pic, stock, version, remark, on_marketing, 
+    is_delete, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from ic_sku_detail
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <!--@mbg.generated-->
+    delete from ic_sku_detail
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.stb.xiheo2o.center.dao.entity.SkuDetail" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into ic_sku_detail (price, long_title, short_title, 
+      father_id, pic, stock, 
+      version, remark, on_marketing, 
+      is_delete, create_time, update_time
+      )
+    values (#{price,jdbcType=BIGINT}, #{longTitle,jdbcType=VARCHAR}, #{shortTitle,jdbcType=VARCHAR}, 
+      #{fatherId,jdbcType=BIGINT}, #{pic,jdbcType=VARCHAR}, #{stock,jdbcType=BIGINT}, 
+      #{version,jdbcType=BIGINT}, #{remark,jdbcType=VARCHAR}, #{onMarketing,jdbcType=BOOLEAN}, 
+      #{isDelete,jdbcType=BOOLEAN}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.stb.xiheo2o.center.dao.entity.SkuDetail" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into ic_sku_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="price != null">
+        price,
+      </if>
+      <if test="longTitle != null">
+        long_title,
+      </if>
+      <if test="shortTitle != null">
+        short_title,
+      </if>
+      <if test="fatherId != null">
+        father_id,
+      </if>
+      <if test="pic != null">
+        pic,
+      </if>
+      <if test="stock != null">
+        stock,
+      </if>
+      <if test="version != null">
+        version,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="onMarketing != null">
+        on_marketing,
+      </if>
+      <if test="isDelete != null">
+        is_delete,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="price != null">
+        #{price,jdbcType=BIGINT},
+      </if>
+      <if test="longTitle != null">
+        #{longTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="shortTitle != null">
+        #{shortTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="fatherId != null">
+        #{fatherId,jdbcType=BIGINT},
+      </if>
+      <if test="pic != null">
+        #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="stock != null">
+        #{stock,jdbcType=BIGINT},
+      </if>
+      <if test="version != null">
+        #{version,jdbcType=BIGINT},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="onMarketing != null">
+        #{onMarketing,jdbcType=BOOLEAN},
+      </if>
+      <if test="isDelete != null">
+        #{isDelete,jdbcType=BOOLEAN},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.stb.xiheo2o.center.dao.entity.SkuDetail">
+    <!--@mbg.generated-->
+    update ic_sku_detail
+    <set>
+      <if test="price != null">
+        price = #{price,jdbcType=BIGINT},
+      </if>
+      <if test="longTitle != null">
+        long_title = #{longTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="shortTitle != null">
+        short_title = #{shortTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="fatherId != null">
+        father_id = #{fatherId,jdbcType=BIGINT},
+      </if>
+      <if test="pic != null">
+        pic = #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="stock != null">
+        stock = #{stock,jdbcType=BIGINT},
+      </if>
+      <if test="version != null">
+        version = #{version,jdbcType=BIGINT},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="onMarketing != null">
+        on_marketing = #{onMarketing,jdbcType=BOOLEAN},
+      </if>
+      <if test="isDelete != null">
+        is_delete = #{isDelete,jdbcType=BOOLEAN},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.stb.xiheo2o.center.dao.entity.SkuDetail">
+    <!--@mbg.generated-->
+    update ic_sku_detail
+    set price = #{price,jdbcType=BIGINT},
+      long_title = #{longTitle,jdbcType=VARCHAR},
+      short_title = #{shortTitle,jdbcType=VARCHAR},
+      father_id = #{fatherId,jdbcType=BIGINT},
+      pic = #{pic,jdbcType=VARCHAR},
+      stock = #{stock,jdbcType=BIGINT},
+      version = #{version,jdbcType=BIGINT},
+      remark = #{remark,jdbcType=VARCHAR},
+      on_marketing = #{onMarketing,jdbcType=BOOLEAN},
+      is_delete = #{isDelete,jdbcType=BOOLEAN},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
